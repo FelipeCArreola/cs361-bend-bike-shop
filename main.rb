@@ -5,9 +5,9 @@ require_relative 'rental'
 
 items = [:apple, :water, :protein_bar]
 
-bike = Bike.new(1, :pink, 99.99, items)
+# bike = Bike.new(1, :pink, 99.99, items)
 
-rental = Rental.new(bike)
+rental = Rental.new(Bike.new(1, :pink, 99.99, items))
 
-puts "Total Price: #{rental.price}, Total Weight: #{rental.weight}"
+puts "Total Price: #{'$%.2f' % rental.price}, Total Weight: #{rental.weight}"
 
